@@ -12,7 +12,7 @@ $(function () {
   var hight = $(window).height();
   var left = $(".side-bar").width();
   $(".side-bar").height(hight);
-  $(".content").height(hight).css("left",left-20);
+  $(".content").height(hight).css("left",left);
 })
 window.onresize = function () {
   var hight = $(window).height();
