@@ -8,3 +8,15 @@ $(function () {
     active = this;
   })
 })
+$(function () {
+  var hight = $(window).height();
+  var left = $(".side-bar").width()-15;
+  $(".side-bar").height(hight);
+  $(".content").height(hight).css("left",left);
+})
+window.onresize = function () {
+  var hight = $(window).height();
+  var left = $(".side-bar").width();
+  $(".side-bar").height(hight);
+  $(".content").height(hight).css("left", left);
+}
