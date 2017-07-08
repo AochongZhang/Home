@@ -14,7 +14,7 @@
   max-width: 120px;
   min-width: 70px;
   /*height: 1000px;*/
-  padding-right: 20px;
+  /*padding-right: 20px;*/
   background-color: rgb(0, 148, 255);
   float: left;
   box-shadow: 0 0px 15px 0px rgba(0, 0, 0, 0.5);
@@ -78,7 +78,7 @@
   overflow: auto;
   position: absolute;
   background-color: #fff;
-  z-index: 99;
+  /*z-index: 80;*/
 }
 .content ul li{
   float: left;
