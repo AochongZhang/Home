@@ -9,27 +9,24 @@ $(function () {
   })
 })
 $(function () {
-  var hight = $(window).height();
-  var left = $(".side-bar").width();
-  $(".side-bar").height(hight);
-  $(".content").height(hight).css("left",left);
+  content();
 })
 window.onresize = function () {
-  var height = $(window).height();
-  var width = $(window).width();
+  content();
+}
+function content() {
+  var height = window.innerHeight;  //使用jQuery方法出现BUG,改为原生方法解决。
+  var width = window.innerWidth;
   var bwidth = $(".side-bar").width();
-  var content = $(".content");
-  var websidewrap = $(".webside-wrap");
-  var cwidth = $(".content").width();
   $(".side-bar").height(height);
-  $(".content").css("left",bwidth).width(width-bwidth).height(height);
-  if (cwidth>=1040) {
-    websidewrap.width(1040);
-  }else if (cwidth<1040&&cwidth>=780) {
-    websidewrap.width(780);
-  }else if (cwidth<780&&cwidth>=520) {
-    websidewrap.width(520);
-  }else if (cwidth<520&&cwidth>=260) {
-    websidewrap.width(260);
-  }
+  $(".content").width(width-bwidth).height(height);
+  // console.log("window-widht   :"+width);
+  // console.log("window-height  :"+height);
+  // console.log("side-bar-width :"+bwidth);
+  // console.log("side-bar-height:"+$(".side-bar").height());
+  // console.log("content-width  :"+$(".content").width());
+  // console.log("width-bwidth   :"+(width-bwidth));
+  // console.log("content-height :"+$(".content").height());
+  // console.log("------------------------");
+
 }
