@@ -6,15 +6,17 @@
   font-size: 15px;
 }
 
+/****************************************/
+
 .wrap{
   width: 100%;
   position: relative;
 }
 
 .side-bar{
-  width: 20%;
-  max-width: 120px;
-  min-width: 70px;
+  /*width: 20%;
+  max-width: 150px;
+  min-width: 70px;*/
   background-color: rgb(0, 148, 255);
   float: left;
   box-shadow: 0 0px 15px 0px rgba(0, 0, 0, 0.5);
@@ -41,6 +43,8 @@
   white-space: nowrap; /*强制文字不自动换行*/
 }
 
+/****************************************/
+
 @font-face {
   font-family: 'iconfont';  /* project id 347317 */
   src: url('https://at.alicdn.com/t/font_p2kcpi9r295p14i.eot');
@@ -62,34 +66,40 @@
     vertical-align: middle; /*文字与图标垂直居中*/
 }
 
-
-
-
-
-
-
-
-
-
-
+/****************************************/
 
 .content{
-  max-width: 1920px;
-  min-width: 290px;
   overflow: auto;
   position: absolute;
-  padding-left: 40px;
+}
+
+.webside-wrap{
+  margin: 0 auto;
 }
 
 .content ul li{
   float: left;
 }
 
+/*.search-wrap{
+  width: 1040px;
+  margin: 0 auto;
+}
+.search-box{
+  width: 480px;
+  height: 50px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.16);
+  transition: box-shadow .5s ease-in-out;
+  float: left;
+}*/
+
 .webside{
   display: inline-block;
   width: 220px;
   height: 70px;
-  margin: 20px 40px 20px 0;
+  margin: 20px;
   text-align: center;
   box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.16);
   transition: box-shadow .5s ease-in-out;
@@ -118,4 +128,59 @@
 
 .display-none{
   display: none;
+}
+@media (max-width: 590px){
+  .side-bar{
+    width: 70px;
+  }
+  .content{
+    left: 70px;
+  }
+  .webside-wrap{
+    width: 260px;
+  }
+}
+@media (max-width: 670px) and (min-width: 591px){
+  .side-bar{
+    width: 150px;
+  }
+  .content{
+    left: 150px;
+  }
+  .webside-wrap{
+    width: 260px;
+  }
+}
+@media (max-width: 930px) and (min-width: 671px){
+  .side-bar{
+    width: 150px;
+  }
+  .content{
+    left: 150px;
+  }
+  .webside-wrap{
+    width: 520px;
+  }
+}
+@media (max-width: 1190px) and (min-width: 931px){
+  .side-bar{
+    width: 150px;
+  }
+  .content{
+    left: 150px;
+  }
+  .webside-wrap{
+    width: 780px;
+  }
+}
+@media (min-width: 1191px){
+  .side-bar{
+    width: 150px;
+  }
+  .content{
+    left: 150px;
+  }
+  .webside-wrap{
+    width: 1040px;
+  }
 }
