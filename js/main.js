@@ -30,6 +30,17 @@ function content() {
   // console.log("------------------------");
 
 }
-$("#submit").submit(function () {
-  alert(1);
+$(function () {
+  $("#g-search-input").keydown(function(e){
+      // alert(e.keyCode);
+      if (e.keyCode===13) {
+        $("#g-search-form").submit();
+      }
+  })
+  $("#b-search-input").keydown(function(e){
+      // alert(e.keyCode);
+      if (e.keyCode===13) {
+        $("#b-search-form").submit();
+      }
+  })
 })
