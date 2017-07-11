@@ -14,9 +14,6 @@
 }
 
 .side-bar{
-  /*width: 20%;
-  max-width: 150px;
-  min-width: 70px;*/
   background-color: rgb(0, 148, 255);
   float: left;
   box-shadow: 0 0px 15px 0px rgba(0, 0, 0, 0.5);
@@ -47,11 +44,11 @@
 
 @font-face {
   font-family: 'iconfont';  /* project id 347317 */
-  src: url('https://at.alicdn.com/t/font_p2kcpi9r295p14i.eot');
-  src: url('https://at.alicdn.com/t/font_p2kcpi9r295p14i.eot?#iefix') format('embedded-opentype'),
-  url('https://at.alicdn.com/t/font_p2kcpi9r295p14i.woff') format('woff'),
-  url('https://at.alicdn.com/t/font_p2kcpi9r295p14i.ttf') format('truetype'),
-  url('https://at.alicdn.com/t/font_p2kcpi9r295p14i.svg#iconfont') format('svg');
+  src: url('https://at.alicdn.com/t/font_vl3nww3hmm18aor.eot');
+  src: url('https://at.alicdn.com/t/font_vl3nww3hmm18aor.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_vl3nww3hmm18aor.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_vl3nww3hmm18aor.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_vl3nww3hmm18aor.svg#iconfont') format('svg');
 }
 
 .iconfont{
@@ -73,29 +70,11 @@
   position: absolute;
 }
 
-.webside-wrap{
+.webside-wrap,.search-wrap{
   margin: 0 auto;
 }
 
-.content ul li{
-  float: left;
-}
-
-/*.search-wrap{
-  width: 1040px;
-  margin: 0 auto;
-}
-.search-box{
-  width: 480px;
-  height: 50px;
-  margin: 20px;
-  text-align: center;
-  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.16);
-  transition: box-shadow .5s ease-in-out;
-  float: left;
-}*/
-
-.webside{
+.webside,.search-box{
   display: inline-block;
   width: 220px;
   height: 70px;
@@ -103,9 +82,10 @@
   text-align: center;
   box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.16);
   transition: box-shadow .5s ease-in-out;
+  float: left;
 }
 
-.webside:hover{
+.webside:hover,.search-box:hover{
   box-shadow: 7px 7px 17px 0px rgba(0, 0, 0, 0.3);
 }
 
@@ -129,26 +109,98 @@
 .display-none{
   display: none;
 }
-@media (max-width: 590px){
+
+.search-text{
+  display: inline-block;
+  height: 50px;
+  border: none;
+  outline: none;
+  line-height: 50px;
+  float: left;
+  margin: 0 10px;
+
+}
+
+.search-btn{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #ccc;
+  border: none;
+  outline: none;
+}
+
+.search-btn{
+  background: url(../images/search.png) no-repeat;
+  background-size: 50px 50px;
+}
+
+/****************************************/
+
+@media (max-width: 430px){
   .side-bar{
     width: 70px;
   }
   .content{
     left: 70px;
   }
-  .webside-wrap{
+  .webside-wrap,.search-wrap{
     width: 260px;
   }
+  .search-box{
+    width: 220px;
+    height: 50px;
+  }
+  .search-logo{
+    width: 50px;
+    height: 50px;
+    float: left;
+  }
+  .search-logo-g{
+    background: url(../images/Google-search-s.png) no-repeat;
+    background-size: 50px 50px;
+    background-color: rgb(245, 245, 245);
+  }
+  .search-logo-b{
+    background: url(../images/baidu-search-s.png) no-repeat;
+    background-size: 50px 50px;
+    background-color: rgb(245, 245, 245);
+  }
+  .search-text{
+    width: 100px;
+  }
 }
-@media (max-width: 670px) and (min-width: 591px){
+@media (max-width: 670px) and (min-width: 431px){
   .side-bar{
     width: 150px;
   }
   .content{
     left: 150px;
   }
-  .webside-wrap{
+  .webside-wrap,.search-wrap{
     width: 260px;
+  }
+  .search-box{
+    width: 220px;
+    height: 50px;
+  }
+  .search-logo{
+    width: 50px;
+    height: 50px;
+    float: left;
+  }
+  .search-logo-g{
+    background: url(../images/Google-search-s.png) no-repeat;
+    background-size: 50px 50px;
+    background-color: rgb(245, 245, 245);
+  }
+  .search-logo-b{
+    background: url(../images/baidu-search-s.png) no-repeat;
+    background-size: 50px 50px;
+    background-color: rgb(245, 245, 245);
+  }
+  .search-text{
+    width: 100px;
   }
 }
 @media (max-width: 930px) and (min-width: 671px){
@@ -158,9 +210,33 @@
   .content{
     left: 150px;
   }
-  .webside-wrap{
+  .webside-wrap,.search-wrap{
     width: 520px;
   }
+  .search-box{
+    width: 480px;
+    height: 50px;
+  }
+  .search-logo{
+    width: 125px;
+    height: 50px;
+    float: left;
+  }
+  .search-logo-g{
+    background: url(../images/Google-search.png) no-repeat;
+    background-size: 125px 50px;
+    background-color: rgb(245, 245, 245);
+  }
+  .search-logo-b{
+    background: url(../images/baidu-search.png) no-repeat;
+    background-size: 125px 50px;
+    background-color: rgb(245, 245, 245);
+  }
+  .search-text{
+    width: 285px;
+  }
+
+
 }
 @media (max-width: 1190px) and (min-width: 931px){
   .side-bar{
@@ -169,8 +245,30 @@
   .content{
     left: 150px;
   }
-  .webside-wrap{
+  .webside-wrap,.search-wrap{
     width: 780px;
+  }
+  .search-box{
+    width: 350px;
+    height: 50px;
+  }
+  .search-logo{
+    width: 50px;
+    height: 50px;
+    float: left;
+  }
+  .search-logo-g{
+    background: url(../images/Google-search-s.png) no-repeat;
+    background-size: 50px 50px;
+    background-color: rgb(245, 245, 245);
+  }
+  .search-logo-b{
+    background: url(../images/baidu-search-s.png) no-repeat;
+    background-size: 50px 50px;
+    background-color: rgb(245, 245, 245);
+  }
+  .search-text{
+    width: 230px;
   }
 }
 @media (min-width: 1191px){
@@ -180,7 +278,29 @@
   .content{
     left: 150px;
   }
-  .webside-wrap{
+  .webside-wrap,.search-wrap{
     width: 1040px;
+  }
+  .search-box{
+    width: 480px;
+    height: 50px;
+  }
+  .search-logo{
+    width: 125px;
+    height: 50px;
+    float: left;
+  }
+  .search-logo-g{
+    background: url(../images/Google-search.png) no-repeat;
+    background-size: 125px 50px;
+    background-color: rgb(245, 245, 245);
+  }
+  .search-logo-b{
+    background: url(../images/baidu-search.png) no-repeat;
+    background-size: 125px 50px;
+    background-color: rgb(245, 245, 245);
+  }
+  .search-text{
+    width: 285px;
   }
 }
