@@ -30,3 +30,6 @@ function content() {
   // console.log("------------------------");
 
 }
+$("#submit").submit(function () {
+  alert(1);
+})
