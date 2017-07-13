@@ -141,6 +141,7 @@
   height: 175px;
   padding-top: 30px;
   background-color: #0094ff;
+  box-shadow: inset 5px 0px 17px 0px rgba(0, 0, 0, 0.14);
 }
 .about-headicon{
   width: 100px;
@@ -151,7 +152,7 @@
 }
 
 .about-name{
-  width: 200px;
+  width: 210px;
   height: 25px;
   text-align: center;
   line-height: 25px;
