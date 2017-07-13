@@ -136,6 +136,55 @@
 }
 
 /****************************************/
+.about{
+  width: 100%;
+  height: 175px;
+  padding-top: 30px;
+  background-color: #0094ff;
+}
+.about-headicon{
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.about-name{
+  width: 200px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  margin: 20px auto;
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+}
+.connection-icon{
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin: 10px;
+  border-radius: 25px;
+  background-color: #0094ff;
+  transition: border-radius .3s ease-in-out;
+}
+
+.connection-icon:hover{
+  border-radius: 12px;
+}
+
+.about img{
+  width: 100%;
+  height: 100%;
+}
+
+.about-connection{
+  width: 210px;
+  height: 70px;
+  margin: 40px auto;
+}
+/****************************************/
 
 @media (max-width: 430px){
   .side-bar{

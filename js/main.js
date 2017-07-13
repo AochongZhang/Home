@@ -4,7 +4,12 @@ $(function () {
     $(active).removeClass("side-bar-active");
     $("." + $(active).attr("id")).hide();
     $(this).addClass("side-bar-active");
-    $("." + $(this).attr("id")).slideDown(500);
+    $("." + $(this).attr("id")).stop().slideDown();
+    if ($(this).attr("id")=="about") {
+      $(".search-wrap").stop().slideUp();
+    }else {
+      $(".search-wrap").stop().slideDown();
+    }
     active = this;
   })
 })
