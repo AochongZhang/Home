@@ -25,15 +25,6 @@ function content() {
   var bwidth = $(".side-bar").width();
   $(".side-bar").height(height);
   $(".content").width(width-bwidth).height(height);
-  // console.log("window-widht   :"+width);
-  // console.log("window-height  :"+height);
-  // console.log("side-bar-width :"+bwidth);
-  // console.log("side-bar-height:"+$(".side-bar").height());
-  // console.log("content-width  :"+$(".content").width());
-  // console.log("width-bwidth   :"+(width-bwidth));
-  // console.log("content-height :"+$(".content").height());
-  // console.log("------------------------");
-
 }
 $(function () {
   $("#g-search-input").keydown(function(e){

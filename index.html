@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" charset="utf-8"></script>
     <script src="js/main.js" charset="utf-8"></script>
+    <script src="js/vue.js" charset="utf-8"></script>
+    <script src="js/web-data.js" charset="utf-8"></script>
   </head>
   <body>
     <div class="wrap">
@@ -72,7 +74,7 @@
 
         </ul>
       </div>
-      <div class="content">
+      <div class="content" id="content">
         <div class="search-wrap">
           <div class="search-box">
             <div class="search-logo search-logo-g"></div>
@@ -91,213 +93,89 @@
         </div>
         <div class="webside-wrap program">
           <ul>
-            <li><a class="webside" href="https://nodejs.org/en/">
-              <div class="icon"><img src="images/NodeJs.png" alt=""></div>
-              <span>Node.js</span>
-            </a></li>
-            <li><a class="webside" href="https://facebook.github.io/react/">
-              <div class="icon"><img src="images/React.png" alt=""></div>
-              <span>React</span>
-            </a></li>
-            <li><a class="webside" href="https://cn.vuejs.org">
-              <div class="icon"><img src="images/VueJs.png" alt=""></div>
-              <span>Vue.js</span>
-            </a></li>
-            <li><a class="webside" href="http://www.bootcss.com">
-              <div class="icon"><img src="images/Bootstrap.png" alt=""></div>
-              <span>Bootstrap中文网</span>
-            </a></li>
-            <li><a class="webside" href="https://www.python.org">
-              <div class="icon"><img src="images/Python.png" alt=""></div>
-              <span>Python</span>
-            </a></li>
-            <li><a class="webside" href="https://github.com">
-              <div class="icon"><img src="images/GitHub.png" alt=""></div>
-              <span>GitHub</span>
-            </a></li>
-            <li><a class="webside" href="https://brew.sh/index_zh-cn.html">
-              <div class="icon"><img src="images/Homebrew.png" alt=""></div>
-              <span>Homebrew</span>
-            </a></li>
-            <li><a class="webside" href="http://www.ofmonkey.com">
-              <div class="icon"><img src="images/程序员在线工具.png" alt=""></div>
-              <span>程序员在线工具</span>
+            <li v-for="data in program"><a class="webside" :href="data.url" :title="data.url">
+              <div class="icon"><img :src="data.img" :alt="data.title"></div>
+              <span>{{data.title}}</span>
             </a></li>
           </ul>
         </div>
         <div class="webside-wrap design display-none">
           <ul>
-            <li><a class="webside" href="http://www.easyicon.net">
-              <div class="icon"><img src="images/EasyIcon.png" alt=""></div>
-              <span>EasyIcon</span>
-            </a></li>
-            <li><a class="webside" href="http://www.iconfont.cn/manage/index">
-              <div class="icon"><img src="images/Iconfont.png" alt=""></div>
-              <span>Iconfont</span>
-            </a></li>
-            <li><a class="webside" href="http://nipponcolors.com/#shironezumi">
-              <div class="icon"><img src="images/NIPPON COLORS.png" alt=""></div>
-              <span>NIPPON COLORS</span>
-            </a></li>
-            <li><a class="webside" href="http://cli.im">
-              <div class="icon"><img src="images/草料二维码.png" alt=""></div>
-              <span>草料二维码</span>
+            <li v-for="data in design"><a class="webside" :href="data.url" :title="data.url">
+              <div class="icon"><img :src="data.img" :alt="data.title"></div>
+              <span>{{data.title}}</span>
             </a></li>
           </ul>
         </div>
         <div class="webside-wrap course display-none">
           <ul>
-            <li><a class="webside" href="http://www.imooc.com">
-              <div class="icon"><img src="images/慕课网.png" alt=""></div>
-              <span>慕课网</span>
-            </a></li>
-            <li><a class="webside" href="http://study.163.com/">
-              <div class="icon"><img src="images/网易云课堂.png" alt=""></div>
-              <span>网易云课堂</span>
-            </a></li>
-            <li><a class="webside" href="http://www.51zxw.net/study.asp?vip=4754485">
-              <div class="icon"><img src="images/我要自学网.png" alt=""></div>
-              <span>我要自学网</span>
-            </a></li>
-            <li><a class="webside" href="http://haoduoshipin.com">
-              <div class="icon"><img src="images/网址.png" alt=""></div>
-              <span>haoduoshipin</span>
-            </a></li>
-            <li><a class="webside" href="http://www.runoob.com">
-              <div class="icon"><img src="images/菜鸟教程.png" alt=""></div>
-              <span>菜鸟教程</span>
-            </a></li>
-            <li><a class="webside" href="http://www.liaoxuefeng.com">
-              <div class="icon"><img src="images/网址.png" alt=""></div>
-              <span>廖雪峰的官方网站</span>
+            <li v-for="data in course"><a class="webside" :href="data.url" :title="data.url">
+              <div class="icon"><img :src="data.img" :alt="data.title"></div>
+              <span>{{data.title}}</span>
             </a></li>
           </ul>
         </div>
         <div class="webside-wrap ss display-none">
           <ul>
-            <li><a class="webside" href="http://ss.ishadowx.com/index_cn.html">
-              <div class="icon"><img src="images/iShadow.png" alt=""></div>
-              <span>iShadow</span>
-            </a></li>
-            <li><a class="webside" href="https://shadowsocksr.ru">
-              <div class="icon"><img src="images/免费ShadowsocksR.png" alt=""></div>
-              <span>免费ShadowsocksR</span>
+            <li v-for="data in ss"><a class="webside" :href="data.url" :title="data.url">
+              <div class="icon"><img :src="data.img" :alt="data.title"></div>
+              <span>{{data.title}}</span>
             </a></li>
           </ul>
         </div>
         <div class="webside-wrap bbs display-none">
           <ul>
-            <li><a class="webside" href="https://www.chiphell.com/">
-              <div class="icon"><img src="images/chiphell.png" alt=""></div>
-              <span>Chiphell</span>
-            </a></li>
-            <li><a class="webside" href="https://www.zhihu.com/">
-              <div class="icon"><img src="images/知乎.png" alt=""></div>
-              <span>知乎</span>
-            </a></li>
-            <li><a class="webside" href="http://bbs.gfan.com">
-              <div class="icon"><img src="images/机锋论坛.png" alt=""></div>
-              <span>机锋论坛</span>
-            </a></li>
-            <li><a class="webside" href="http://www.dgtle.com/dgmobile.php">
-              <div class="icon"><img src="images/数字尾巴.png" alt=""></div>
-              <span>数字尾巴</span>
+            <li v-for="data in design"><a class="webside" :href="data.url" :title="data.url">
+              <div class="icon"><img :src="data.img" :alt="data.title"></div>
+              <span>{{data.title}}</span>
             </a></li>
           </ul>
         </div>
         <div class="webside-wrap blog display-none">
           <ul>
-            <li><a class="webside" href="http://www.ruanyifeng.com/blog/">
-              <div class="icon"><img src="images/网址.png" alt=""></div>
-              <span>阮一峰的网络日志</span>
+            <li v-for="data in design"><a class="webside" :href="data.url" :title="data.url">
+              <div class="icon"><img :src="data.img" :alt="data.title"></div>
+              <span>{{data.title}}</span>
             </a></li>
           </ul>
         </div>
         <div class="webside-wrap web display-none">
           <ul>
-            <li><a class="webside" href="https://www.apple.com/cn/">
-              <div class="icon"><img src="images/Apple.png" alt=""></div>
-              <span>Apple</span>
-            </a></li>
-            <li><a class="webside" href="http://www.sonystyle.com.cn/">
-              <div class="icon"><img src="images/sony.png" alt=""></div>
-              <span>SONY</span>
-            </a></li>
-            <li><a class="webside" href="https://www.siemens.com/cn/zh/home.html">
-              <div class="icon"><img src="images/siemens.png" alt=""></div>
-              <span>SIEMENS</span>
-            </a></li>
-            <li><a class="webside" href="http://www.philips.com.cn">
-              <div class="icon"><img src="images/philips.png" alt=""></div>
-              <span>PHILIPS</span>
-            </a></li>
-            <li><a class="webside" href="http://www.samsung.com/cn/">
-              <div class="icon"><img src="images/samsung.png" alt=""></div>
-              <span>SAMSUNG</span>
+            <li v-for="data in web"><a class="webside" :href="data.url" :title="data.url">
+              <div class="icon"><img :src="data.img" :alt="data.title"></div>
+              <span>{{data.title}}</span>
             </a></li>
           </ul>
         </div>
         <div class="webside-wrap media display-none">
           <ul>
-            <li><a class="webside" href="https://www.youtube.comYouTube">
-              <div class="icon"><img src="images/YouTube.png" alt=""></div>
-              <span>YouTube</span>
-            </a></li>
-            <li><a class="webside" href="http://www.youku.com">
-              <div class="icon"><img src="images/优酷.png" alt=""></div>
-              <span>优酷</span>
-            </a></li>
-            <li><a class="webside" href="http://www.meijutt.com">
-              <div class="icon"><img src="images/网址.png" alt=""></div>
-              <span>美剧天堂</span>
+            <li v-for="data in media"><a class="webside" :href="data.url" :title="data.url">
+              <div class="icon"><img :src="data.img" :alt="data.title"></div>
+              <span>{{data.title}}</span>
             </a></li>
           </ul>
         </div>
         <div class="webside-wrap shop display-none">
           <ul>
-            <li><a class="webside" href="https://www.taobao.com">
-              <div class="icon"><img src="images/淘宝网.png" alt=""></div>
-              <span>淘宝网</span>
-            </a></li>
-            <li><a class="webside" href="https://www.jd.com">
-              <div class="icon"><img src="images/京东商城.png" alt=""></div>
-              <span>京东商城</span>
-            </a></li>
-            <li><a class="webside" href="https://www.1688.com/">
-              <div class="icon"><img src="images/阿里巴巴.png" alt=""></div>
-              <span>阿里巴巴</span>
+            <li v-for="data in shop"><a class="webside" :href="data.url" :title="data.url">
+              <div class="icon"><img :src="data.img" :alt="data.title"></div>
+              <span>{{data.title}}</span>
             </a></li>
           </ul>
         </div>
         <div class="webside-wrap map display-none">
           <ul>
-            <li><a class="webside" href="http://ditu.amap.com">
-              <div class="icon"><img src="images/高德地图.png" alt=""></div>
-              <span>高德地图</span>
-            </a></li>
-            <li><a class="webside" href="http://www.google.cn/maps/">
-              <div class="icon"><img src="images/Google地图.png" alt=""></div>
-              <span>Google地图</span>
-            </a></li>
-            <li><a class="webside" href="https://www.google.com/earth/">
-              <div class="icon"><img src="images/Google地球.png" alt=""></div>
-              <span>Google地球</span>
+            <li v-for="data in map"><a class="webside" :href="data.url" :title="data.url">
+              <div class="icon"><img :src="data.img" :alt="data.title"></div>
+              <span>{{data.title}}</span>
             </a></li>
           </ul>
         </div>
         <div class="webside-wrap search display-none">
           <ul>
-            <li><a class="webside" href="https://www.google.com.hk">
-              <div class="icon"><img src="images/Google.png" alt=""></div>
-              <span>Google</span>
-            </a></li>
-            <li><a class="webside" href="http://magnet.chongbuluo.com">
-              <div class="icon"><img src="images/虫部落.png" alt=""></div>
-              <span>虫部落</span>
-            </a></li>
-            <li><a class="webside" href="http://www.javzoo.org">
-              <div class="icon"><img src="images/搜索.png" alt=""></div>
-              <span>JAVZOO</span>
+            <li v-for="data in search"><a class="webside" :href="data.url" :title="data.url">
+              <div class="icon"><img :src="data.img" :alt="data.title"></div>
+              <span>{{data.title}}</span>
             </a></li>
           </ul>
         </div>
