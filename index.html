@@ -13,6 +13,7 @@
   </head>
   <body>
     <div class="wrap">
+      <!-- 边栏 -->
       <div class="side-bar">
         <ul>
           <li id="program" class="side-bar-active">
@@ -27,9 +28,9 @@
               <i class="iconfont">&#xe619;</i>
               <span>教程</span>
           </li>
-          <li id="ss">
-              <i class="iconfont">&#xe652;</i>
-              <span>翻墙</span>
+          <li id="tools">
+              <i class="iconfont">&#xe619;</i>
+              <span>工具</span>
           </li>
           <li id="bbs">
               <i class="iconfont">&#xe60d;</i>
@@ -39,17 +40,9 @@
               <i class="iconfont">&#xe6ae;</i>
               <span>博客</span>
           </li>
-          <li id="web">
-              <i class="iconfont">&#xe607;</i>
-              <span>官网</span>
-          </li>
           <li id="media">
               <i class="iconfont">&#xe600;</i>
               <span>影音</span>
-          </li>
-          <li id="shop">
-              <i class="iconfont">&#xe632;</i>
-              <span>网购</span>
           </li>
           <li id="map">
               <i class="iconfont">&#xe603;</i>
@@ -74,8 +67,11 @@
 
         </ul>
       </div>
+      <!-- 主体内容 -->
       <div class="content" id="content">
+        <!-- 搜索 -->
         <div class="search-wrap">
+          <!-- 谷歌搜索 -->
           <div class="search-box">
             <div class="search-logo search-logo-g"></div>
             <form class="form" id="g-search-form" action="https://www.google.com/search?" method="get">
@@ -83,6 +79,7 @@
               <input type="submit" name="" value="" class="search-btn">
             </form>
           </div>
+          <!-- 百度搜索 -->
           <div class="search-box">
             <div class="search-logo search-logo-b"></div>
             <form class="form" id="b-search-form" action="https://www.baidu.com/s" method="get">
@@ -91,6 +88,7 @@
             </form>
           </div>
         </div>
+        <!-- 编程网站 -->
         <div class="webside-wrap program">
           <ul>
             <li v-for="data in program"><a class="webside" :href="data.url" :title="data.url">
@@ -99,6 +97,7 @@
             </a></li>
           </ul>
         </div>
+        <!-- 设计网站 -->
         <div class="webside-wrap design display-none">
           <ul>
             <li v-for="data in design"><a class="webside" :href="data.url" :title="data.url">
@@ -107,6 +106,7 @@
             </a></li>
           </ul>
         </div>
+        <!-- 教程网站 -->
         <div class="webside-wrap course display-none">
           <ul>
             <li v-for="data in course"><a class="webside" :href="data.url" :title="data.url">
@@ -115,38 +115,34 @@
             </a></li>
           </ul>
         </div>
-        <div class="webside-wrap ss display-none">
+        <!-- 在线工具 -->
+        <div class="webside-wrap tools display-none">
           <ul>
-            <li v-for="data in ss"><a class="webside" :href="data.url" :title="data.url">
+            <li v-for="data in tools"><a class="webside" :href="data.url" :title="data.url">
               <div class="icon"><img :src="data.img" :alt="data.title"></div>
               <span>{{data.title}}</span>
             </a></li>
           </ul>
         </div>
+        <!-- 论坛网站 -->
         <div class="webside-wrap bbs display-none">
           <ul>
-            <li v-for="data in design"><a class="webside" :href="data.url" :title="data.url">
+            <li v-for="data in bbs"><a class="webside" :href="data.url" :title="data.url">
               <div class="icon"><img :src="data.img" :alt="data.title"></div>
               <span>{{data.title}}</span>
             </a></li>
           </ul>
         </div>
+        <!-- 博客网站 -->
         <div class="webside-wrap blog display-none">
           <ul>
-            <li v-for="data in design"><a class="webside" :href="data.url" :title="data.url">
+            <li v-for="data in blog"><a class="webside" :href="data.url" :title="data.url">
               <div class="icon"><img :src="data.img" :alt="data.title"></div>
               <span>{{data.title}}</span>
             </a></li>
           </ul>
         </div>
-        <div class="webside-wrap web display-none">
-          <ul>
-            <li v-for="data in web"><a class="webside" :href="data.url" :title="data.url">
-              <div class="icon"><img :src="data.img" :alt="data.title"></div>
-              <span>{{data.title}}</span>
-            </a></li>
-          </ul>
-        </div>
+        <!-- 影音网站 -->
         <div class="webside-wrap media display-none">
           <ul>
             <li v-for="data in media"><a class="webside" :href="data.url" :title="data.url">
@@ -155,14 +151,7 @@
             </a></li>
           </ul>
         </div>
-        <div class="webside-wrap shop display-none">
-          <ul>
-            <li v-for="data in shop"><a class="webside" :href="data.url" :title="data.url">
-              <div class="icon"><img :src="data.img" :alt="data.title"></div>
-              <span>{{data.title}}</span>
-            </a></li>
-          </ul>
-        </div>
+        <!-- 地图网站 -->
         <div class="webside-wrap map display-none">
           <ul>
             <li v-for="data in map"><a class="webside" :href="data.url" :title="data.url">
@@ -171,6 +160,16 @@
             </a></li>
           </ul>
         </div>
+        <!-- 应用下载 -->
+        <div class="webside-wrap app display-none">
+          <ul>
+            <li v-for="data in app"><a class="webside" :href="data.url" :title="data.url">
+              <div class="icon"><img :src="data.img" :alt="data.title"></div>
+              <span>{{data.title}}</span>
+            </a></li>
+          </ul>
+        </div>
+        <!-- 搜索网站 -->
         <div class="webside-wrap search display-none">
           <ul>
             <li v-for="data in search"><a class="webside" :href="data.url" :title="data.url">
@@ -179,6 +178,16 @@
             </a></li>
           </ul>
         </div>
+        <!-- 其他网站 -->
+        <div class="webside-wrap others display-none">
+          <ul>
+            <li v-for="data in others"><a class="webside" :href="data.url" :title="data.url">
+              <div class="icon"><img :src="data.img" :alt="data.title"></div>
+              <span>{{data.title}}</span>
+            </a></li>
+          </ul>
+        </div>
+        <!-- 关于 -->
         <div class="about display-none">
           <div class="about-headicon">
             <img src="images/头像.png" alt="">
