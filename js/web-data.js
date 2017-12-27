@@ -20,7 +20,7 @@ $(function () {
         {title: '花瓣', url: 'http://huaban.com', img: 'images/花瓣.png'},
         {title: 'EasyIcon', url: 'http://www.easyicon.net', img: 'images/EasyIcon.png'},
         {title: 'NIPPON COLORS', url: 'http://nipponcolors.com', img: 'images/NIPPON COLORS.png'},
-        {title: 'iconfont', url: 'http://www.iconfont.cn', img: 'images/iconfont.png'},
+        {title: 'iconfont', url: 'http://www.iconfont.cn', img: 'images/Iconfont.png'},
       ],
       // 教程网站
       course: [
