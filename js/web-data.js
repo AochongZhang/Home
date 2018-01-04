@@ -50,7 +50,8 @@ $(function () {
       ],
       // 博客
       blog: [
-        {title: '阮一峰的网络日志', url: 'http://www.ruanyifeng.com/blog/', img: 'images/网址.png'}
+        {title: '阮一峰的网络日志', url: 'http://www.ruanyifeng.com/blog/', img: 'images/网址.png'},
+        {title: 'YouMeek', url: 'http://www.youmeek.com', img: 'images/youmeek.png'}
       ],
       // 影音
       media: [
