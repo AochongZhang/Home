@@ -12,6 +12,7 @@ $(function () {
         {title: 'Java', url: 'https://www.java.com/', img: 'images/java.png'},
         {title: 'GitHub', url: 'https://github.com', img: 'images/GitHub.png'},
         {title: 'Homebrew', url: 'https://brew.sh/index_zh-cn.html', img: 'images/Homebrew.png'},
+        {title: 'Gradle', url: 'https://gradle.org/', img: 'images/gradle.png'},
 
       ],
       // 设计网站
