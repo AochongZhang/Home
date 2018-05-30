@@ -13,6 +13,7 @@ $(function () {
         {title: 'GitHub', url: 'https://github.com', img: 'images/GitHub.png'},
         {title: 'Homebrew', url: 'https://brew.sh/index_zh-cn.html', img: 'images/Homebrew.png'},
         {title: 'Gradle', url: 'https://gradle.org/', img: 'images/gradle.png'},
+        {title: 'Docker', url: 'https://www.docker.com', img: 'images/docker.png'},
 
       ],
       // 设计网站
